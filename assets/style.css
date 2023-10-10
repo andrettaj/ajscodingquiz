@@ -1,0 +1,25 @@
+body {
+
+    background-color: #f4f4f4;
+    color:purple
+}
+
+/* Keeps View High Score right aligned */
+.box-1{
+    margin-top: 5%;
+    padding: 30px;
+}
+
+/* Aligns Time to the right of the page. */
+.box-2{
+    color: #333333;
+    text-align: right;
+    margin-top: -10%;
+    padding: 30px;
+}
+
+.groupquestion-1{
+  text-align: center;
+
+
+}
