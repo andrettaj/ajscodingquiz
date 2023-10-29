@@ -17,9 +17,17 @@ body {
     margin-top: -10%;
     padding: 30px;
 }
-
+.startbox-3{
+    background-color: darkblue;
+    color: white;
+}
+.startbox-
 .groupquestion-1{
   text-align: center;
 
 
+}
+.start_btn {
+    font-family: 'Open Sans', sans-serif;
+  font-size: 100px;
 }
