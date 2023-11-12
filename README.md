@@ -10,5 +10,8 @@ I learned how to use a timer and how to change from one section of questions to 
 
 I think what makes this project stand out is actually how I can answer one set of questions and the screen pulls up another set of questions.
 
+I collaborated with a tudor to get this code to work along with some youtube videos by Traversy
+https://www.youtube.com/watch?v=yfoY53QXEnI&list=PLmjGDu2QwyWTJA98qmTF73F93tHH2nUQs&index=24&t=1929s for some help with CSS coding
 ####Need to add the dep######
 ####Need to add a screen shot
+Need Deployed readme file

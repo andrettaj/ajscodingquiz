@@ -1,85 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ajscodingquiz</title>
-    <link rel="stylesheet" type="text/css" href ="./assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ajscodingquiz</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+
 <body>
-    <div>
-    <h3>View high scores</h3> 
-    </div>
-    <div class="box-2">
+  <div>
+    <h3>View high scores</h3>
+  </div>
+  <div class="box-2">
     <h3>Time:</h3>
 
     <h2>Coding Quiz Challenge</h2>
     <h3>Try to answer the following code-related questions within the time limit.</h3>
     <h3>Keep in mind that the incorrect answers will penalize your score/time by ten seconds.</h3>
-    </div>
-    <br>
-    
-    <div class="start_btn"><button>Start Quiz</button></div>
-  
-    </div>
+  </div>
+  <br>
 
-    <div class ="buttons">
-      <button class="quit">Exit Quiz</button>
-      <button class="restart">Continue</button>
-    </div>
+  <div id="start_btn"><button>Start Quiz</button></div>
 
-    <!--Quiz Box -->
-    <div class="quiz_box">
-      <header>
-        
-        <div class="title">ajscodingquiz Application
+
+
+  <div class="container">
+    <div class="row">
+
+      <!--Quiz Box -->
+      <div class="quiz_box col-4">
+
         <div class="timer">
-          <div class="time_left_txt">Time Left</div>
-          <div class="timer_sec">80</div>
-        
+          <h3 class="time_left_txt">Time Left:
+            <span class="timer_sec">80</span>
+          </h3>
+
           <div class="time_line"></div>
-        
+
         </div>
-        </header>
-    
-        <section>
-        <div class="que_text">
+
+      </div>
+      <section id="quiz-container" class="col-8">
+        <div id="que_text">
           <!-- Insert Options from Javascript -->
         </div>
         <div class="option_list">
           <!-- Insert options from Javascript -->
-        </div>
-        </section>
 
-        <!-- footer of Quiz Box -->
-        <footer>
-          <div class="total_que">
-            
-          </div>
-        </footer>
+          <button data-value="0" class="options">Exit Quiz</button>
+          <button data-value="1" class="options">Continue</button>
+
+          <button data-value="2" class="options">Exit Quiz</button>
+          <button data-value="3" class="options">Continue</button>
         </div>
 
-        
-      
+
+      </section>
     </div>
+  </div>
+  <!-- footer of Quiz Box -->
+  <footer>
+    <div class="total_que">
+
+    </div>
+  </footer>
+  </div>
 
 
-    <div class ="groupquestion-1">
+
+  </div>
+
+
+  <!-- <div class="groupquestion-1">
     <h2>Commonly Used Data types DO not include: __________________</h2>
-     <h3>
-        <ol> 
-        <li>1. strings</li>
-        <li>2.  booleans</li>
-        <li>3.   alerts</li>
-        <li>4.   numbers</li>
-        </ol>
-      </h3>
-    </div>
-
-<script>src="main.js"</script>
+    <h3>
+      <ol>
+        <li> strings</li>
+        <li> booleans</li>
+        <li> alerts</li>
+        <li> numbers</li>
+      </ol>
+    </h3>
+  </div> -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/script_version_1.js"></script>
 
 
 </body>
+
 </html>
-
-
