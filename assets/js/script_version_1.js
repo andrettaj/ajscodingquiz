@@ -3,23 +3,31 @@ var startButton = document.getElementById("start_btn")
 quizContainer.style.display = "none"
 var questionText = document.getElementById("que_text")
 var options = document.querySelectorAll(".options")
+var correct = document.getElementById("correct")
+var timerEl = document.querySelector(".timer_sec");
+
+// Initialize the current question index, score, and timer
+let currentQuestionIndex = 0;
+let score = 0;
+let timerLeft = 80;
+
 options.forEach(element => element.addEventListener("click",checkAnswer))
 // Timer that counts down from 5
 function countdown() {
-    var timeLeft = 5;
+   
 
     // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
     var timeInterval = setInterval(function () {
         // As long as the `timeLeft` is greater than 1
-        if (timeLeft > 1) {
+        if (timerLeft > 1) {
             // Set the `textContent` of `timerEl` to show the remaining seconds
-            timerEl.textContent = timeLeft + ' seconds remaining';
+            timerEl.textContent = timerLeft + ' seconds remaining';
             // Decrement `timeLeft` by 1
-            timeLeft--;
-        } else if (timeLeft === 1) {
+            timerLeft--;
+        } else if (timerLeft === 1) {
             // When `timeLeft` is equal to 1, rename to 'second' instead of 'seconds'
-            timerEl.textContent = timeLeft + ' second remaining';
-            timeLeft--;
+            timerEl.textContent = timerLeft + ' second remaining';
+            timerLeft--;
         } else {
             // Once `timeLeft` gets to 0, set `timerEl` to an empty string
             timerEl.textContent = '';
@@ -63,16 +71,13 @@ const questions = [
 ];
 
 
-// Initialize the current question index, score, and timer
-let currentQuestionIndex = 0;
-let score = 0;
-let timer = 80;
 
 // Start the quiz
 startButton.addEventListener("click", function startQuiz() {
     quizContainer.style.display = "block"
     startButton.style.display = "none"
     displayCurrentQuestion()
+    countdown()
 })
 // Display the current question
 function displayCurrentQuestion() {
@@ -92,8 +97,10 @@ function checkAnswer(event) {
       if (answer === questions[currentQuestionIndex].correctAnswer) {
         // Increase the score
         score++;
+        correct.innerText ="Correct"
       }else{
-
+        timerLeft -=5;
+        correct.innerText ="Wrong"
       }
 
 
