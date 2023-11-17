@@ -5,19 +5,26 @@ var questionText = document.getElementById("que_text")
 var options = document.querySelectorAll(".options")
 var correct = document.getElementById("correct")
 var timerEl = document.querySelector(".timer_sec");
+var quizover = document.getElementById("quizover")
+quizover.style.display = "none"
+var scoreElement = document.getElementById("score") 
+var InitialsElement = document.getElementById("Initials")
+var buttonElement = document.getElementById("initalsButton")
 
 // Initialize the current question index, score, and timer
 let currentQuestionIndex = 0;
 let score = 0;
 let timerLeft = 80;
+var timeInterval;
 
+buttonElement.addEventListener("click", savescore)
 options.forEach(element => element.addEventListener("click",checkAnswer))
-// Timer that counts down from 5
+// Timer that counts down from 80
 function countdown() {
    
 
     // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
-    var timeInterval = setInterval(function () {
+        timeInterval = setInterval(function () {
         // As long as the `timeLeft` is greater than 1
         if (timerLeft > 1) {
             // Set the `textContent` of `timerEl` to show the remaining seconds
@@ -90,6 +97,22 @@ function displayCurrentQuestion() {
 
 
 }
+
+function showResults (){
+    quizContainer.style.display = "none"
+    quizover.style.display = "block"
+    clearInterval(timeInterval);
+    scoreElement.textContent = timerLeft
+}
+function savescore () {
+    var Initials = InitialsElement.value
+    console.log(Initials)
+    // first retieve any saved scores from localstorage
+    // add a new score to the array {initials: "", score: 12}
+// then save the updated array back to localstorage
+    localStorage.setItem("key", JSON.stringify())
+}
+
 //     // Add an event listener to the answer choice
 function checkAnswer(event) {
     var answer = event.target.innerText
