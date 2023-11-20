@@ -77,8 +77,6 @@ const questions = [
 
 ];
 
-
-
 // Start the quiz
 startButton.addEventListener("click", function startQuiz() {
     quizContainer.style.display = "block"
@@ -93,8 +91,6 @@ function displayCurrentQuestion() {
     for (let i = 0; i < 4; i++) {
         options[i].innerText = question.answers[i]
     }
-
-
 
 }
 
